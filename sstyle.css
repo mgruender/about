@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --muted: #888888;
+  --border: #dddddd;
+  --nav-h: 48px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.nav-links a:hover { text-decoration: none; color: var(--ink); }
+.nav-links a.active { color: var(--ink); }
+
+/* ── INNER PAGES ── */
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 52px 40px 96px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+/* ── TYPEWRITER ── */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  border-right: 2px solid var(--ink);
+  vertical-align: bottom;
+  animation:
+    typing 1.1s steps(20, end) 0.3s forwards,
+    blink 0.7s step-end 1.4s infinite;
+}
+
+@keyframes typing {
+  from { max-width: 0; }
+  to   { max-width: 480px; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: var(--ink); }
+  50%       { border-color: transparent; }
+}
+
+/* ── META / MUTED ── */
+.meta {
+  color: var(--muted);
+  font-size: 0.83rem;
+  margin-bottom: 14px;
+}
+
+.muted { color: var(--muted); }
+
+.summary {
+  font-size: 0.92rem;
+  max-width: 520px;
+  color: #333;
+}
+
+/* ── SECTION LABEL ── */
+.section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+/* ── RESUME ACCORDION ── */
+details {
+  margin-bottom: 4px;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  padding: 3px 0;
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::before {
+  content: '+ ';
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+details[open] > summary::before { content: '− '; }
+
+.item-title {
+  display: inline;
+  font-weight: 700;
+}
+
+/* Resume levels */
+.level-1 { padding-left: 0; }
+
+.level-2 {
+  padding-left: 20px;
+  margin-top: 4px;
+}
+
+/* level-3: the description shown by default, bullets hidden inside */
+.level-3 {
+  padding-left: 20px;
+  margin-top: 2px;
+  font-size: 0.87rem;
+  color: #444;
+}
+
+.level-3 .desc-summary {
+  color: var(--muted);
+  font-size: 0.84rem;
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+.level-3 p { margin-bottom: 4px; }
+
+/* ── PORTFOLIO / HOBBIES ROWS ── */
+.item-row {
+  padding: 18px 0;
+}
+
+.item-row + .item-row {
+  border-top: 1px solid #eeeeee;
+}
+
+.item-row-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.item-row h3 {
+  font-size: 0.97rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.item-row p {
+  font-size: 0.87rem;
+  color: #444;
+  line-height: 1.65;
+  max-width: 540px;
+  margin-bottom: 7px;
+}
+
+.item-row-link {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.item-row-link:hover { color: var(--ink); }
+
+/* ── HOME PAGE ── */
+body.home {
+  min-height: 100vh;
+}
+
+.home-page {
+  padding: 72px 52px 64px;
+  max-width: 560px;
+}
+
+.home-greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.home-sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 48px;
+}
+
+/* ── HOME MENU ── */
+.home-menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 52px;
+}
+
+.home-menu-item {
+  display: flex;
+  flex-direction: column;
+  padding: 11px 0;
+  text-decoration: none;
+  color: var(--ink);
+  transition: padding-left 0.12s;
+}
+
+.home-menu-item:hover { padding-left: 6px; }
+.home-menu-item:hover .menu-label {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.menu-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.menu-plus {
+  color: var(--muted);
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.menu-num {
+  font-size: 0.78rem;
+  color: var(--muted);
+  flex-shrink: 0;
+  width: 22px;
+}
+
+.menu-label {
+  font-size: 0.97rem;
+  font-weight: 700;
+}
+
+.menu-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 2px;
+  padding-left: 0;
+}
+
+/* ── HOME FOOTER ── */
+.home-footer {
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.home-footer a { color: var(--muted); }
+.home-footer a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── FOOTER (inner pages) ── */
+footer {
+  padding: 20px 40px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
