@@ -254,16 +254,13 @@ body.home {
 .home-menu-item {
   display: flex;
   flex-direction: column;
-  padding: 13px 0;
+  padding: 11px 0;
   text-decoration: none;
   color: var(--ink);
   transition: padding-left 0.12s;
 }
 
-.home-menu-item:hover {
-  padding-left: 8px;
-}
-
+.home-menu-item:hover { padding-left: 6px; }
 .home-menu-item:hover .menu-label {
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -272,21 +269,20 @@ body.home {
 .menu-row {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
 }
 
 .menu-plus {
   color: var(--muted);
   font-size: 0.82rem;
   flex-shrink: 0;
-  width: 10px;
 }
 
 .menu-num {
   font-size: 0.78rem;
   color: var(--muted);
   flex-shrink: 0;
-  width: 20px;
+  width: 22px;
 }
 
 .menu-label {
@@ -297,8 +293,8 @@ body.home {
 .menu-desc {
   font-size: 0.78rem;
   color: var(--muted);
-  padding-left: 42px;
-  margin-top: 1px;
+  margin-top: 2px;
+  padding-left: 0;
 }
 
 /* ── HOME FOOTER ── */
@@ -308,6 +304,7 @@ body.home {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 4px;
 }
 
 .home-footer a { color: var(--muted); }
