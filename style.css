@@ -258,10 +258,12 @@ body.home {
   padding: 11px 0;
   text-decoration: none;
   color: var(--ink);
-  transition: padding-left 0.12s;
 }
  
-.home-menu-item:hover { padding-left: 6px; }
+.home-menu-item:nth-child(1) { padding-left: 0px; }
+.home-menu-item:nth-child(2) { padding-left: 24px; }
+.home-menu-item:nth-child(3) { padding-left: 48px; }
+ 
 .home-menu-item:hover .menu-label {
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -317,4 +319,3 @@ footer {
   font-size: 0.78rem;
   color: var(--muted);
 }
- 
