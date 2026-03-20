@@ -164,7 +164,6 @@ details[open] > summary::before { content: '− '; }
   margin-top: 4px;
 }
  
-/* level-3: the description shown by default, bullets hidden inside */
 .level-3 {
   padding-left: 20px;
   margin-top: 2px;
@@ -261,7 +260,7 @@ body.home {
 }
  
 .home-menu-item:nth-child(1) { padding-left: 0px; }
-.home-menu-item:nth-child(2) { padding-left: 24px; }
+.home-menu-item:nth-child(2) { padding-left: 32px; }
 .home-menu-item:nth-child(3) { padding-left: 0px; }
  
 .home-menu-item:hover .menu-label {
@@ -299,19 +298,6 @@ body.home {
   margin-top: 2px;
   padding-left: 0;
 }
- 
-/* ── HOME FOOTER ── */
-.home-footer {
-  font-size: 0.78rem;
-  color: var(--muted);
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: 4px;
-}
- 
-.home-footer a { color: var(--muted); }
-.home-footer a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
  
 /* ── FOOTER (inner pages) ── */
 footer {
