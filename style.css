@@ -259,9 +259,8 @@ body.home {
   color: var(--ink);
 }
  
-.home-menu-item:nth-child(1) { padding-left: 0px; }
-.home-menu-item:nth-child(2) { padding-left: 32px; }
-.home-menu-item:nth-child(3) { padding-left: 0px; }
+.home-menu-item:nth-child(odd)  { padding-left: 0px; }
+.home-menu-item:nth-child(even) { padding-left: 64px; }
  
 .home-menu-item:hover .menu-label {
   text-decoration: underline;
